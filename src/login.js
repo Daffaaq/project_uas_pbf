@@ -29,9 +29,17 @@ class Login extends Component {
     });
   }
 
+  handleLogout = () => {
+    this.setState({
+      username: '',
+      password: '',
+      isLoggedIn: false
+    });
+  }
+
   render() {
     if (this.state.isLoggedIn) {
-      return <Dashboard username={this.state.username} />;
+      return <Dashboard username={this.state.username} onLogout={this.handleLogout} />;
     }
 
     return (

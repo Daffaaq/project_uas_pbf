@@ -5,6 +5,7 @@ function Dashboard(props) {
     <div>
       <h2>Welcome, {props.username}!</h2>
       <p>You have successfully logged in.</p>
+      <button onClick={props.onLogout}>Logout</button>
     </div>
   );
 }
